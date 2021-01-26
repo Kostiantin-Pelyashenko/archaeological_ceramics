@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Программа формализованно-статистической обработки керамики</title>
+<link rel="shortcut icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" type="text/css" href="gening.css">
+<style>
+
+</style>
+</head>
+<body>
+	<header>
+	<h1>Программа формализованно-статистической обработки керамики (по В.Ф. Генингу)</h1>
+	</header>
+	<div class="row">
+		<div class="column" id="column1">
+			<form>
+			<h2> Введите параметры сосуда</h2>
+			<fieldset>
+			
+			<legend>Параметры сосуда (Р), (в сантиметрах)</legend>
+				<label for="dv">Диаметр венчика (P1): </label><br>
+				<input type="text" name="diametr_venchica" id="dv" value="" size="10"><br>
+				<label for="dsh">Диаметр основания шейки (P2): </label><br>
+				<input type="text" name="diametr_osnovania_sheiki" id="dsh" value="" size="10"><br>
+				<label for="dt">Диаметр наибольшего расширения корпуса (P3): </label><br>
+				<input type="text" name="diametr_naibolshego_rashirenia_corpusa" id="dt" value="" size="10"><br>
+				<label for="dn">Диаметр дна (P4): </label><br>
+				<input type="text" name="diametr_dna" id="dn" value="" size="10"><br>
+				<label for="hp">Общая высота сосуда (Р5): </label><br>
+				<input type="text" name="obshaia_visota" id="hp" value="" size="10"><br>
+				<label for="hsh">Высота шейки (Р6): </label><br>
+				<input type="text" name="visota_sheiki" id="hsh" value="" size="10"><br>
+				<label for="hpl">Высота плечика (Р7): </label><br>
+				<input type="text" name="visota_plechika" id="hpl" value="" size="10"><br>
+				<label for="hdn">Высота придонной части (Р8): </label><br>
+				<input type="text" name="visota_pridonnoi_chasti" id="hdn" value="" size="10"><br>
+				<label for="thw">Толщина стенок: </label><br>
+				<input type="text" name="tolshina_stenki" id="thw" value="" size="10"><br>
+				<label for="thb">Толщина дна: </label><br>
+				<input type="text" name="tolshina_dna" id="thb" value="" size="10"><br>
+				<p> <b>Внимание!</b>: <i>числа с десятичными дробями записываются с использованием точки, а не запятой (например: 1.234)</i></p>
+				<hr>
+			<div class="but">
+			<button type="button" class="buttons" onclick="myFunction()">Вычислить указатели форм горшков (УФ)</button>
+			<button type="button" class="buttons" onclick="myFunction2()">Вычислить объем сосуда (на основании классической формулы - объем усеченного конуса)</button>
+			<button type="button" class="buttons" onclick="myFunction3()">Вычислить объем сосуда (на основании формулы В.Ф. Генинга)</button>
+			</div>
+			</fieldset>
+			</form>
+			
+		</div>
+		
+		<div class="column" id="column2">
+			<h2>Указатели форм горшков</h2>
+				<p>Пропорция шейки (ФА): <span id="fa"></span></p>
+				<p>Угол наклона шейки (ФБ): <span id="fb"></span></p>
+				<p>Пропорция плечика (ФВ): <span id="fv"></span></p>
+				<p>Угол крутизны плечика (ФГ): <span id="fg"></span></p>
+				<p>Общая пропорция сосуда (ФД): <span id="fd"></span></p>
+				<p>Высота плечика (ФЕ): <span id="fe"></span></p>
+				<p>Общая конфигурация (попорция) верхней части сосуда (ФЖ): <span id="fj"></span></p>
+				<p>Общая конфигурация придонной части сосуда (ФИ): <span id="fi"></span></p>
+				<img src="param.jpg" id="param"></img>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column" id="column3">
+			<h2>Объём сосуда (классическая формула)</h2>
+			<h3>Для целых форм (в кубических сантиметрах): <span id="v1"></span></h3>
+			<hr>
+			<h3>Для верхних частей (в кубических сантиметрах): <span id="v2"></span></h3>
+		</div>
+		
+		<div class="column" id="column4">
+			<h2>Объём сосуда (формула В.Ф.Генинга)</h2>
+			<h3>Для целых форм (в кубических сантиметрах): <span id="v3"></span></h3>
+			<hr>
+			<h3>Для верхних частей (в кубических сантиметрах): <span id="v4"></span></h3>
+		</div>
+	</div>
+	
+	<script src="gening.js"></script>
+	
+	
+</body>
+</html>
